@@ -7,9 +7,7 @@ function NearbyCar() {
         //get the stored value from the recoil Atom
     const currentCar = useRecoilValue(selectedCar)
         //set the Atom's value to a local component's state 
-    // const handleCar = (id) => {
-    //     setCar(id)
-    // }
+        //set a const effect here
   return (
     <div className='mt-5'>
         <h5>Nearby Rentals</h5>
@@ -26,7 +24,7 @@ function NearbyCar() {
                         <div>
                             <img className='img img-fluid car-img me-3' src={car.img}>
                             </img>
-                            <button onClick={handleCar(id)}></button>
+                            <button onClick={null}></button>
                         </div>
                     </div>
                 </button>
