@@ -4,11 +4,11 @@ import {useRecoilState, useRecoilValue} from 'recoil'
 import './CurrentCar.sass'
 
 function CurrentCarComponent() {
-    const currentCar = useRecoilValue(selectedCar) 
+    //get the stored value from the recoil Atom
+    const currentCar = useRecoilValue(selectedCar)
+    //set the Atom's value to a local component's state 
     const [car, setCar] = useState(currentCar[1])
-    const handleCarChange = () => {
-        setCar(currentCar[3])
-    }
+    
     return(
      <>
     <button className='current-car-button '>
@@ -25,7 +25,7 @@ function CurrentCarComponent() {
                 </div>
                 <div className='row d-flex justify-content-between'>
                     {/* {possibly location of car below?} */}
-                    <p className='col-6 text-start'>{null}</p>                
+                    <p className='col-6 text-start'>{null}</p>             
                 </div>
 
             </div>
