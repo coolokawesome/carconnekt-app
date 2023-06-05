@@ -1,0 +1,30 @@
+$backgroundWhite: #f3f3f3
+$boxShadow: 3px 4px 19px #dfdfdf
+.nearby-car-container
+    background-color: $backgroundWhite
+    border-radius: 25px
+    box-shadow:$boxShadow
+    transition-duration: 0.2s
+    &:hover
+        transition-duration: 0.2s
+        box-shadow: 3px 4px 19px #d4d4d4
+
+
+.nearby-car-component-container
+    max-height: 40vh !important
+    overflow-y: scroll
+    &::-webkit-scrollbar-button
+        background-color: red
+        color: red    
+.car-img
+    width: 25%
+    float: right
+
+.nearby-rental-button
+    background-color: $backgroundWhite
+    border: 0px 
+    transition-duration: 0.2s
+    &:hover
+        transform: translateY(-2px)
+        transition-duration: 0.2s
+
