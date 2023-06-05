@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { selectedCar, allCarsAvailable, carSelector } from './atoms.js'
+import { selectedCar, allCarsAvailable } from './atoms.js'
 import {useRecoilState, useRecoilValue} from 'recoil'
 import './NearbyCar.sass'
 function NearbyCar() {
