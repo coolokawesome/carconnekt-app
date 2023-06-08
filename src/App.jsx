@@ -5,13 +5,17 @@ import CurrentTrip from './CurrentTrip'
 import RecentTrips from './RecentTrips'
 import { useAtom } from 'jotai'
 import { CurrentLocation } from './atoms'
-
+import logo from './imgs/logo.png'
+import { useCallback, useState } from 'react'
 function App() {
   const [location, setLocation] = useAtom(CurrentLocation)
+ 
+
   return (
   <div> 
-    <div className='container nav-container d-flex justify-content-between'>
-      <h1 className='left-nav mt-5'>Welcome Back, <a className='reservation-car text-decoration-none'>User</a></h1>
+    <div className='mt-4 container nav-container d-flex justify-content-between align-items-center'>
+      <img className='img img-fluid logo' src={logo}></img>
+      <h1 className='left-nav '>Welcome Back, <a className='reservation-car text-decoration-none'>{`User`}</a></h1>
       <div className='right-nav d-flex align-items-center'>
          <div className='location-nav'>
           <a>

@@ -82,11 +82,11 @@ function CurrentCarComponent() {
                     :
                     null}
                 </div>
-                <div className='col-12 col-lg-6 text-start text-lg-center'>
+                <div className='col-lg-6 col-xl-4 offset-lg-0 offset-xl-1 text-start text-lg-center'>
                     <h2 class="reservation-car">
                         {car != null ? <> {car.make} {car.model}</> : null }
                     </h2>
-                    {car != null ? <img className='col-10 offset-1 col-lg-12 offset-lg-0 img img-fluid' src={car.img}></img> : null}
+                    {car != null ? <img className='col-10 offset-1 col-lg-12 col-xl-10 offset-lg-0 offset-xl-1 img img-fluid' src={car.img}></img> : null}
                 </div>
             </div>            
           </Typography>

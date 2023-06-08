@@ -27,6 +27,7 @@ function NearbyCar() {
             left: '50%',
             transform: 'translate(-50%, -50%)',
             width: '80%',
+            minHeight: '50%',
             bgcolor: 'background.paper',
             border: '2px solid #000',
             boxShadow: 24,
@@ -99,13 +100,13 @@ function NearbyCar() {
                     :
                     null}
                 </div>
-                <div className='col-12 col-lg-6 text-start text-lg-center'>
+                <div className='col-lg-6 col-xl-4 offset-lg-0 offset-xl-1 text-start text-lg-center'>
                     <h2 class="reservation-car">
                         {modalCar != null ? <> {modalCar.make} {modalCar.model}</> : null }
                     </h2>
-                    {modalCar != null ? <img className='col-10 offset-1 col-lg-12 offset-lg-0 img img-fluid' src={modalCar.img}></img> : null}
+                    {modalCar != null ? <img className='col-10 offset-1 col-lg-12 col-xl-10 offset-lg-0 offset-xl-1 img img-fluid' src={modalCar.img}></img> : null}
                 </div>
-                <button onClick={handleNewCar} className='btn btn-primary'>Reserve Now</button>
+                <button onClick={handleNewCar} className='btn btn-primary mt-5'>Reserve Now</button>
             </div>            
           </Typography>
         </Box>
