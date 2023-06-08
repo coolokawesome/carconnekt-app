@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { CurrentCar, allCarsAvailable } from './atoms.js'
+import { CurrentCar, CurrentLocation, allCarsAvailable } from './atoms.js'
 import './NearbyCar.sass'
 import { useAtom } from 'jotai'
 import Modal from '@mui/material/Modal';
@@ -12,6 +12,7 @@ function NearbyCar() {
     const [currentCar, setCurrentCar] = useAtom(CurrentCar)
     const [open, setOpen] = useState(false)
     const [modalCar, setModalCar] = useState(null)
+    const [, setCurrentTrip] = useAtom(CurrentLocation)
 
         //modal handling
     const handleModal = (e) => {
@@ -35,7 +36,14 @@ function NearbyCar() {
     const handleNewCar = (e) => {
         setOpen(false)
         setCurrentCar(modalCar)
+        console.log(currentCar.location.address)
+        setCurrentTrip(currentCar.location)
     }
+    useEffect(() => {
+        setCurrentTrip(
+            currentCar.location
+        )
+    }, [currentCar])
 
   return (
     <div className='mt-5'>

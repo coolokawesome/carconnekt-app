@@ -3,19 +3,21 @@ import CurrentCarComponent from './CurrentCar'
 import NearbyCar from './NearbyCar'
 import CurrentTrip from './CurrentTrip'
 import RecentTrips from './RecentTrips'
+import { useAtom } from 'jotai'
+import { CurrentLocation } from './atoms'
 
 function App() {
+  const [location, setLocation] = useAtom(CurrentLocation)
   return (
   <div> 
     <div className='container nav-container d-flex justify-content-between'>
-      <h1 className='left-nav mt-5'>Welcome Back</h1>
+      <h1 className='left-nav mt-5'>Welcome Back, <a className='reservation-car text-decoration-none'>User</a></h1>
       <div className='right-nav d-flex align-items-center'>
          <div className='location-nav'>
           <a>
             <i class="fa-solid fa-location-dot me-2 ">
-              </i>{`location`}</a>
-              <a><i class="fa-solid fa-pen-to-square ms-2"></i>
-              </a>
+              </i>{location.address}</a>
+
           </div>
       </div>
     </div>

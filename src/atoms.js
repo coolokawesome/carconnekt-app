@@ -145,3 +145,8 @@ export const CurrentCar = atom (
         }
         },
 )
+export const CurrentLocation = atom (
+    {
+        address: "33 King St. Toronto, ON"
+    }
+)
