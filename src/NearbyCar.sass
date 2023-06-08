@@ -1,3 +1,8 @@
+@font-face 
+  font-family: "Lexend"
+  src: url('./fonts/LexendDeca-VariableFont_wght.ttf')
+$blue: #569dd0
+$activeBlue: #2b8eac
 $backgroundWhite: #f3f3f3
 $boxShadow: 3px 4px 19px #dfdfdf
 .nearby-car-container
@@ -27,4 +32,21 @@ $boxShadow: 3px 4px 19px #dfdfdf
     &:hover
         transform: translateY(-2px)
         transition-duration: 0.2s
-
+h2
+    font-family: "Lexend" !important
+.MuiBox-root
+    font-family: "Lexend" !important
+    border: 0px white !important
+    border-radius: 10px
+.reservation-title
+    font-weight: 700
+.btn-primary
+    background-color: $blue
+    border-radius: 3px !important
+    &:hover
+        background-color: $activeBlue !important
+        border: 1px solid $activeBlue
+.reservation-car
+    color: $blue
+.modal-desc-col
+    font-family: "Lexend"
