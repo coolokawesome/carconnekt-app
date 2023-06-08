@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { selectedCar, allCarsAvailable } from './atoms.js'
-import {useRecoilState, useRecoilValue} from 'recoil'
+import { CurrentCar, allCarsAvailable } from './atoms.js'
 import './CurrentCar.sass'
+import { useAtom } from 'jotai'
 
 function CurrentCarComponent() {
+
     //get the stored value from the recoil Atom
-    const currentCar = useRecoilValue(selectedCar)
-    //set the Atom's value to a local component's state 
-    const [car, setCar] = useState(currentCar[1])
-    
+    const [car, setCar] = useAtom(CurrentCar)
     return(
      <>
     <button className='current-car-button '>

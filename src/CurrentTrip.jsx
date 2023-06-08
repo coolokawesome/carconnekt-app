@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import { selectAllTrips } from './atoms'
-import { useRecoilState, useRecoilValue } from 'recoil'
+import { allTrips } from './atoms'
+import { useAtom } from 'jotai'
 import './CurrentTrip.sass'
 function CurrentTrip() {
-  const localeLocationSelector = useRecoilValue(selectAllTrips)
+  const [localeLocationSelector, setLocaleLocationSelector] = useAtom(allTrips)
   const [location, setLocation] = useState(localeLocationSelector[0])
   useEffect(() => {
     setLocation(localeLocationSelector[0])

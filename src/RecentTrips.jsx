@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react"
-import {selectAllTrips} from './atoms'
-import { useRecoilValue } from "recoil"
+import {allTrips} from './atoms'
+import { useAtom } from "jotai"
 import './RecentTrips.sass'
 function RecentTrips() {
-    const allTrips = useRecoilValue(selectAllTrips)
+    
+    const [trips, setTrips] = useAtom(allTrips)
     return(
         <div className='recent-trips-container mt-3'>
             <h5>Recent Trips</h5>
             {
-                allTrips.map((trip, id) => {
+                trips.map((trip, id) => {
                     return (
                         <div id={`trip-${id}`} className="trip-container p-3 my-2">
                             <h5 className="trip-label">

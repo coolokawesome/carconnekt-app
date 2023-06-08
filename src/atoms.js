@@ -6,12 +6,9 @@ import Mini from './imgs/cars/mini.png'
 import Nissan from './imgs/cars/nissan.png'
 import Volkswagen from './imgs/cars/golf.png'
 import Audi from './imgs/cars/audi.png'
-import { atom, selector} from 'recoil';
+import {  atom } from 'jotai'
 
-export const allCarsAvailable = atom(
-    {
-        key: "allCarsAvailable",
-        default:[
+export const allCarsAvailable = atom([
             {
             id: 1,
             make: "Tesla",
@@ -116,12 +113,8 @@ export const allCarsAvailable = atom(
                 distance: 0.9
                 }
             } 
-        ]
-    }
-)
-export const allTrips = atom ({
-    key: "tripList",
-    default: [
+        ])
+export const allTrips = atom ([
             {
             departure: "2 April Ct. Toronto, ON",
             arrival: "831 Blooms St. Toronto, ON"
@@ -136,19 +129,19 @@ export const allTrips = atom ({
             departure: "22 Spadina Ave. Toronto, ON",
              arrival: "831 Blooms St. Toronto, ON"
             },
-        ]
-    }
-)
-
-export const selectAllTrips = selector(
+        ])
+export const CurrentCar = atom (
     {
-        key: "selectAllTrips",
-        get: ({get}) => get(allTrips)
-    }
-)
-export const selectedCar = selector(
-    {
-        key: "selectedCar",
-        get: ({get}) => get(allCarsAvailable)
-    }
+        id: 1,
+        make: "Tesla",
+        model: "Model 3",
+        year: 2022,
+        transmission: "automatic",
+        doors: 4,
+        img: Tesla,
+        location:{
+            address: "33 King St. Toronto, ON",
+            distance: 0.3
+        }
+        },
 )
