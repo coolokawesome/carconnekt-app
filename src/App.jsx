@@ -19,7 +19,7 @@ function App() {
       <div className='right-nav d-flex align-items-center'>
          <div className='location-nav'>
           <a>
-            <i class="fa-solid fa-location-dot me-2 ">
+            <i className="fa-solid fa-location-dot me-2 ">
               </i>{location.address}</a>
 
           </div>
